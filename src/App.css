@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.portfolioImgContainer {
+  /* Optional: center the container if needed */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.portfolioImg {
+  height: 400px;       /* Set fixed height */
+  width: 400px;        /* Set width equal to height for perfect circle */
+  object-fit: cover;   /* Cover to keep aspect ratio and fill */
+  border: 3px solid white;  /* Optional white border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow */
+  border-radius: 50%;  /* Make image circular */
+  transition: transform 0.3s ease; /* Smooth scale on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.portfolioImg:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
 }
+
+#skills .border:hover {
+  background-color: #b1b2b4;
+  transition: 0.3s;
+  transform: translateY(-4px);
+}
+
+
+
