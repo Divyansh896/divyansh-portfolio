@@ -1,3 +1,4 @@
+
 .portfolioImgContainer {
   /* Optional: center the container if needed */
   display: flex;
@@ -27,3 +28,27 @@
 
 
 
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon, .carousel-indicators {
+  filter: invert(1); /* invert colors to make white icons black */
+  background-color: transparent; /* remove default bg */
+}
+
+#bgimg {
+  background-image:     linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
+ url('/public/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 85vh; /* or however tall you want it */
+  
+}
+
+
+@media screen and (max-width: 320px) {
+  .portfolioImg {
+    margin-top: 20px;
+    width: 150px; /* or any smaller size */
+    height: auto;
+  }
+}
