@@ -97,7 +97,7 @@ function ProjectCreativeTales() {
             {/* Gradient Overlay */}
             <div className="poster-overlay d-flex justify-content-center align-items-center">
               <a
-                href="https://your-demo-link.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-light fw-semibold"
