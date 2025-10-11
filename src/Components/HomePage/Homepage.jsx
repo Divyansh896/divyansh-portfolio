@@ -442,9 +442,9 @@ function Homepage() {
                         I’d love to bring your ideas to life. Whether it’s a web app, API,
                         or full-stack project — I’m here to help.
                     </p>
-                    <a href="#contact" className="btn btn-primary btn-lg">
+                    <Link to="/contact" className="btn btn-primary btn-lg">
                         Contact Me
-                    </a>
+                    </Link>
                 </motion.div>
             </section>
 
