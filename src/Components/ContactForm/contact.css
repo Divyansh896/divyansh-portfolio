@@ -1,0 +1,69 @@
+#contact{
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 80px; /* Add padding to account for fixed navbar */
+}
+
+
+
+
+.glass-form {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.glass-form input,
+.glass-form textarea {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  opacity: 1;
+  visibility: visible;
+}
+
+.glass-form input::placeholder,
+.glass-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.glass-form input:focus,
+.glass-form textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  box-shadow: 0 0 10px rgba(120, 64, 255, 0.5);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border: none;
+  box-shadow: 0 0 10px rgba(100, 60, 255, 0.4);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(120, 64, 255, 0.6);
+}
+
+/* Ensure form visibility */
+.contact-section {
+  position: relative;
+  z-index: 5;
+}
+
+.contact-section form {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.contact-section input,
+.contact-section textarea {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}

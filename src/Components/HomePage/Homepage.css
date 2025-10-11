@@ -1,0 +1,263 @@
+.home-section {
+  padding: 40px 0;
+  line-height: 1.6;
+}
+
+#home {
+  width: 100%;
+  min-height: 80vh;
+  margin-top: 18px;
+  height: 100vh;
+  /* Layered background: gradient on top of image */
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1) 10%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("/public/background.webp") center/cover no-repeat;
+
+  background-blend-mode: overlay; /* ensures gradient blends with image */
+}
+
+/* Wrapper around image and text */
+.wrapper {
+  margin-top: 20px;
+  overflow: hidden;
+  /* necessary for floated elements */
+}
+
+/* General circular image */
+.circle-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Default float (left) */
+.circle-img.float-left {
+  float: left;
+  margin-right: 20px;
+}
+
+/* Float right specifically for About section */
+.about-section .circle-img.float-right {
+  float: right;
+  margin-left: 20px;
+}
+
+
+
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 25px;
+  margin-right: 15px;
+  border-radius: 25px !important;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #6c63ff !important;
+  color: #fff !important;
+}
+
+.primary-btn:hover {
+  background-color: #574fd6 !important;
+}
+
+.secondary-btn {
+  background-color: transparent !important;
+  color: #6c63ff !important;
+  border: 2px solid #6c63ff !important;
+}
+
+.secondary-btn:hover {
+  background-color: #6c63ff !important;
+  color: #fff !important;
+}
+
+/* 🌐 Social Media Buttons */
+.social-media-btns {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  justify-content: center;
+}
+
+.social-media-btns a {
+  color: #fff;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.social-media-btns a:hover {
+  transform: scale(1.2);
+}
+.social-media-btns a {
+  font-size: 1.8rem;
+  transition: transform 0.3s, filter 0.3s;
+  display: inline-block;
+}
+
+/* Hover effect for all icons */
+.social-media-btns a:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+}
+
+
+.skill-item {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-muted) !important;
+  backdrop-filter: blur(10px);
+}
+.skill-item:hover {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--accent-primary) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--accent-primary) !important;
+}
+
+
+.icon-small {
+  font-size: 2rem; /* or 40px */
+}
+
+.icon-large {
+  font-size: 2.5rem; /* or 40px */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .circle-img {
+    float: none;
+    display: block;
+    margin: 0 auto 20px;
+    shape-outside: none; /* disable wrapping on small screens */
+    clip-path: circle(50%);
+  }
+
+  .intro-text p,
+  .intro-text h1 {
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+    #home{
+        height: 90vh;
+    }
+  .wrapper,
+  #home {
+    margin-top: 0;
+  }
+  .home-section{
+    padding-top: 0;
+  }
+  .circle-img {
+    width: 270px;
+    height: 270px;
+  }
+
+  .social-media-btns {
+    justify-content: flex-start;
+  }
+
+  .social-media-btns:first-child {
+    margin-left: -20px;
+  }
+}
+
+/* Card design */
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(128, 0, 255, 0.25);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card, .skill-item {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-muted) !important;
+}
+
+
+@media (max-width: 768px) {
+  .row.g-4.text-center {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .row.g-4.text-center > div {
+    position: relative;
+  }
+
+  .stat-card {
+    animation: emergeSpread 0.8s ease-out both;
+    transform-origin: center center;
+  }
+
+  /* ⏱️ Stagger delay for smooth sequence */
+  .row.g-4.text-center > div:nth-child(1) .stat-card { animation-delay: 0.1s; z-index: 8; }
+  .row.g-4.text-center > div:nth-child(2) .stat-card { animation-delay: 0.2s; z-index: 7; }
+  .row.g-4.text-center > div:nth-child(3) .stat-card { animation-delay: 0.3s; z-index: 6; }
+  .row.g-4.text-center > div:nth-child(4) .stat-card { animation-delay: 0.4s; z-index: 5; }
+  .row.g-4.text-center > div:nth-child(5) .stat-card { animation-delay: 0.5s; z-index: 4; }
+  .row.g-4.text-center > div:nth-child(6) .stat-card { animation-delay: 0.6s; z-index: 3; }
+  .row.g-4.text-center > div:nth-child(7) .stat-card { animation-delay: 0.7s; z-index: 2; }
+  .row.g-4.text-center > div:nth-child(8) .stat-card { animation-delay: 0.8s; z-index: 1; }
+
+  /* 💥 Cards emerge from center and spread into place */
+  @keyframes emergeSpread {
+    0% {
+      transform: translate(0, 0) scale(0.3);
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0.3);
+    }
+    60% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+  }
+}

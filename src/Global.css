@@ -1,0 +1,99 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* ==================== Theme Colors ==================== */
+:root {
+  /* Backgrounds */
+  --bg-primary: #121212;        /* Main background */
+  --bg-secondary: #0a0a0a;      /* Section backgrounds / cards */
+
+  /* Accent Colors */
+  --accent-primary: #7a3eff;    /* Purple / main accent */
+  --accent-secondary: #00d4ff;  /* Neon blue accent */
+  --accent-highlight: #e94560;  /* Pink / red highlight */
+
+  /* Text Colors */
+  --text-primary: #ffffff;      /* Main text */
+  --text-secondary: #b8b8b8;    /* Secondary text / muted */
+
+  /* Borders & hover */
+  --border-muted: #1e1e1e;
+  --hover-accent: #8b5cf6;
+
+  /* Success / positive feedback */
+  --success-accent: #4ade80;
+}
+:root {
+  --gradient-primary: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-highlight));
+}
+
+.text-gradient {
+  background: var(--gradient-primary) ;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* 🌐 Navbar */
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar-transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+.navbar-bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px; /* underline thickness */
+  background-color: #fff;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+  transform: translateX(-50%) scaleX(1);
+}
+
+
+footer{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+@media screen and (max-width: 768px) {
+  .navbar-transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navbar a {
+    font-size: 1.1rem;}
+  
+}

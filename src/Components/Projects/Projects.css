@@ -1,0 +1,46 @@
+.poster-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.poster-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(to top, rgba(106, 13, 173, 0.9), rgba(0, 0, 0, 0));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.poster-overlay .btn {
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect for desktop */
+.poster-wrapper:hover .poster-overlay {
+  height: 26%;
+  opacity: 1;
+}
+
+.poster-wrapper:hover .poster-overlay .btn {
+  transform: translateY(0);
+}
+
+/* ✅ Always show overlay on mobile */
+@media (max-width: 768px) {
+  .poster-overlay {
+    height: 26% !important;
+    opacity: 1 !important;
+    background: linear-gradient(to top, rgba(106, 13, 173, 0.85), rgba(0, 0, 0, 0));
+  }
+
+  .poster-overlay .btn {
+    transform: translateY(0);
+  }
+}
